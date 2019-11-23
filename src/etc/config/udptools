@@ -1,7 +1,7 @@
 
 config udpconfig
 	option password 'pwd'
-	option timeout '3'
+	option timeout '1'
 	option client '127.0.0.1'
 	option server '11.11.11.11'
 	option serverport '15903'
