@@ -6,7 +6,6 @@
 
 include $(TOPDIR)/rules.mk
 
-LUCI_DEPENDS:=+udp2raw-tunnel +udpspeeder
 PKG_NAME:=luci-app-udptools
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=3
@@ -19,6 +18,7 @@ define Package/$(PKG_NAME)
 	SUBMENU:=3. Applications
 	TITLE:=LuCI for udp2raw and udpspeeder
 	PKGARCH:=all
+	DEPENDS:= +udp2raw-tunnel +udpspeeder
 endef
 
 define Package/$(PKG_NAME)/description
