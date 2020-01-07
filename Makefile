@@ -18,7 +18,7 @@ define Package/$(PKG_NAME)
 	SUBMENU:=3. Applications
 	TITLE:=LuCI for udp2raw and udpspeeder
 	PKGARCH:=all
-	DEPENDS:= +udp2raw-tunnel +udpspeeder
+	DEPENDS:=+udp2raw-tunnel +udpspeeder
 endef
 
 define Package/$(PKG_NAME)/description
