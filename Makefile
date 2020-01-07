@@ -7,9 +7,9 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_DEPENDS:=+udp2raw-tunnel +udpspeeder
-PKG_NAME:=luci-udptools
+PKG_NAME:=luci-app-udptools
 PKG_VERSION:=1.0.0
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 include $(INCLUDE_DIR)/package.mk
 
