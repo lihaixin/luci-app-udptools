@@ -19,7 +19,7 @@ run_udp()
 	config_get fec $1 fec  
 	config_get timeout $1 timeout
 	(udp2raw -c -l127.0.0.1:21333 -r$server:$serverport --raw-mode faketcp -k $password --fix-gro --cipher-mode xor --auth-mode simple >/tmp/udp2raw.log 2>&1 )&
-	(udpspeeder -c -l$client:$clientport -r127.0.0.1:21333 -f$fec --mode 1 --sock-buf=10240 --timeout $timeout --mtu 1400 --disable-obscure --fifo /tmp/fifo.file  >/tmp/udpspeeder.log 2>&1 )&
+	(udpspeeder -c -l$client:$clientport -r127.0.0.1:21333 --mode 1 -f$fec --sock-buf=10240 --timeout $timeout --mtu 1400 --disable-obscure --fifo /tmp/fifo.file  >/tmp/udpspeeder.log 2>&1 )&
 	ip route add $server via $(ip route | awk '$1=="default" {print $3}')
 }
 
