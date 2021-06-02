@@ -12,8 +12,8 @@ PKG_NAME:=luci-app-udptools
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=3
 
-include $(INCLUDE_DIR)/package.mk
-
+#include $(INCLUDE_DIR)/package.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 define Package/$(PKG_NAME)
 	SECTION:=luci
 	CATEGORY:=LuCI
